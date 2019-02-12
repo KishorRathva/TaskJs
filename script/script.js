@@ -10,8 +10,9 @@ let submitButton = document.querySelector('button[type="submit"]');
 
 
 submitButton.addEventListener('click',login);
-let usrname=document.getElementById("userName").value;
+
 function login(){
+	let usrname=document.getElementById("userName").value;
 	fetch('https://api.myjson.com/bins/y337a')
 	.then(function(response){
 		return response;
@@ -27,8 +28,10 @@ function login(){
 				console.log(users.admin);
 				if(users.admin){
 					alert("Welcom Admin");
+				
 				}else{
 					alert("Welcom");
+
 				}
 			}
 		})
@@ -38,3 +41,5 @@ function login(){
 	})
 
 } 
+
+
