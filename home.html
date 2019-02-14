@@ -16,6 +16,9 @@
 			<div class="col-xs-12 col-sm-12 col-lg-12 col-md-12" style="text-align: center;height: 100%">
 				<h1>HOME</h1>
 			</div>
+			<div class="row">
+			<div id="admin" class="col-xs-12 col-sm-12 col-lg-12 col-md-12" style="text-align: center;"></div>
+		</div>
 		</div>		
 	</div>
 	<div class="container" style="border: 1px solid black ; padding:10px" >
@@ -23,9 +26,6 @@
 			<div class="col-xs-4 col-sm-4 col-lg-4 col-md-4" style="text-align: center;"><button type="button" class="btn btn-primary">ADD</button></div>
 			<div class="col-xs-4 col-sm-4 col-lg-4 col-md-4" style="text-align: center;"><button type="button" class="btn btn-primary">REMOVE</button></div>
 			<div class="col-xs-4 col-sm-4 col-lg-4 col-md-4" style="text-align: center;"><button type="button" class="btn btn-primary">COURSES</button></div>
-		</div>
-		<div class="row">
-			<div id="admin" class="col-xs-12 col-sm-12 col-lg-12 col-md-12" style="text-align: center;"></div>
 		</div>
 	</div>
 <script language="JavaScript">
@@ -40,11 +40,9 @@
     console.log((l));
 
     if(l == "true"){
-    	alert("amdin");
-    	document.getElementById("admin").innerHTML = `<button type="button" class="btn btn-primary">ADMIN</button>`;
+    	document.getElementById("admin").innerHTML = "<p>Hello Admin...</p>";
     }else{
-    	alert("Student");
-    	document.getElementById("admin").innerHTML = `<button type="button" class="btn btn-primary">Student</button>`;	
+    	document.getElementById("admin").innerHTML = "<p>Hello Student...</p>";	
     }
     
   }
