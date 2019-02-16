@@ -1,29 +1,56 @@
-
-html,body{
-		margin:0px;
-		padding: 0px;
-	}
-#header{
-	width:100%;
-	padding:30px;
-	background:black;
-	position:fixed;
-	z-index : 100 ;
-	border: 1px solid black;
-	border-radius: 30px;
-	left :0px;
-	color: white ;
-	font-weight: bold;
-} 
-
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+#header {
+  width: 100%;
+  padding: 30px;
+  background: black;
+  position: fixed;
+  z-index: 100;
+  border: 1px solid black;
+  border-radius: 30px;
+  left: 0px;
+  color: white;
+  font-weight: bold;
+}
 
 #sidemenu {
-	height: 100%;
-	padding:30px;
-	background: gray;
-	position: fixed;
-	z-index: 99;
-	border-right:5px solid;
-	border-radius: 30px;
-	top: 8%;
+  height: 100%;
+  padding: 30px;
+  background: gray;
+  position: fixed;
+  z-index: 99;
+  border-right: 5px solid;
+  border-radius: 30px;
+  top: 8%;
+}
+
+table #students {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#students td,
+#students th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#students tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#students tr:hover {
+  background-color: #ddd;
+}
+
+#students th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #218d24;
+  color: white;
 }
