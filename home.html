@@ -9,46 +9,90 @@
     rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
   />
+  <link rel="stylesheet" href="./style/style.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+  <body>
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-xs-12 col-sm-12 col-lg-12 col-md-12"
+          style="text-align: center;height: 100%"
+        >
+          <h1>HOME</h1>
+        </div>
+        <div class="row">
+          <div
+            id="admin"
+            class="col-xs-12 col-sm-12 col-lg-12 col-md-12"
+            style="text-align: center;"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-xs-12  col-xs-offset-1 col-sm-10 col-sm-offset-1 col-lg-10  col-lg-offset-1 col-md-10 col--offset-1"
+          style="text-align: center;"
+        >
+          <form
+            class="form-inline"
+            action="javascript:void(0);"
+            method="POST"
+            onsubmit="Add()"
+          >
+            <div class="form-group">
+              <label for="add-username">User Name:</label>
+              <input
+                class="form-control"
+                type="text"
+                id="add-username"
+                placeholder="Username"
+              />
+            </div>
+            <div class="form-group">
+              <label for="add-email">Email address:</label>
+              <input
+                class="form-control"
+                type="email"
+                id="add-email"
+                placeholder="Email"
+              />
+            </div>
+            <button type="submit" class="btn btn-default">Add User</button>
+          </form>
+          <table id="student" class="table table-hover table-dark">
+            <tr>
+              <th id="counter"></th>
+              <th>Username</th>
+              <th>Email-id</th>
+            </tr>
+            <tbody id="Sdata"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
 
-<body>
-	
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-lg-12 col-md-12" style="text-align: center;height: 100%">
-				<h1>HOME</h1>
-			</div>
-			<div class="row">
-			<div id="admin" class="col-xs-12 col-sm-12 col-lg-12 col-md-12" style="text-align: center;"></div>
-		</div>
-		</div>		
-	</div>
-	<div class="container" style="border: 1px solid black ; padding:10px" >
-		<div class="row">
-			<div class="col-xs-4 col-sm-4 col-lg-4 col-md-4" style="text-align: center;"><button type="button" class="btn btn-primary">ADD</button></div>
-			<div class="col-xs-4 col-sm-4 col-lg-4 col-md-4" style="text-align: center;"><button type="button" class="btn btn-primary">REMOVE</button></div>
-			<div class="col-xs-4 col-sm-4 col-lg-4 col-md-4" style="text-align: center;"><button type="button" class="btn btn-primary">COURSES</button></div>
-		</div>
-	</div>
-<script language="JavaScript">
-  function processUser()
-  {
-    var parameters = location.search.substring(1).split("&");
-    console.log(parameters);
+    <script language="JavaScript">
+      function processUser() {
+        var parameters = location.search.substring(1).split("&");
+        // console.log(parameters);
         var temp = parameters[0].split("=");
         let l = unescape(temp[1]);
-        console.log(temp);
-        console.log(l);
-    if(l == "true"){
-    	document.getElementById("admin").innerHTML = "<p>Hello Admin...</p>";
-    }else{
-    	document.getElementById("admin").innerHTML = "<p>Hello Student...</p>";	
-    }
-    
-  }
-  processUser();
-</script>
-</body>
+        // console.log(temp);
+        // console.log(l);
+        if (l == "true") {
+          document.getElementById("admin").innerHTML = "<p>Hello Admin...</p>";
+        } else {
+          document.getElementById("admin").innerHTML =
+            "<p>Hello Student...</p>";
+        }
+      }
+      processUser();
+    </script>
+    <script src="script/storage.js"></script>
+    <script src="./script/action.js"></script>
+  </body>
 </html>
