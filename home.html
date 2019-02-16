@@ -20,74 +20,65 @@
           class="col-xs-12 col-sm-12 col-lg-12 col-md-12"
           style="text-align: center;height: 100%"
         >
-        <div class="container">
-            <div class="panel panel-primary">
-              <div class="panel-body">
-                <h3 class="text-on-pannel text-primary"><strong class="text-uppercase"> HOME </strong></h3>
-                <p> Your code </p>
-              </div>
+        <div class="panel panel-primary">
+            <div class="panel-body">
+              <h3 class="text-on-pannel text-primary"><strong class="text-uppercase"> HOME </strong></h3>
+              <div
+              class="col-xs-12 col-sm-12 col-lg-12 col-md-12"
+              style="text-align: center;"
+            ><h2 id="admin"></h2>
+          </div>
             </div>
-            <div>
-        </div>
-        <div class="row">
-          <div
-            id="admin"
-            class="col-xs-12 col-sm-12 col-lg-12 col-md-12"
-            style="text-align: center;"
-          ></div>
+          </div>
         </div>
       </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="panel panel-primary">
-          <div class="panel-body">
-            <h3 class="text-on-pannel text-primary">
-              <strong class="text-uppercase">Title</strong>
-
-              <div
-                class="col-xs-12  col-xs-offset-1 col-sm-10 col-sm-offset-1 col-lg-10  col-lg-offset-1 col-md-10 col--offset-1"
-                style="text-align: center;"
-              >
-                <form
-                  class="form-inline"
-                  action="javascript:void(0);"
-                  method="POST"
-                  onsubmit="Add()"
-                >
-                  <div class="form-group">
-                    <label for="add-username">User Name:</label>
-                    <input
-                      class="form-control"
-                      type="text"
-                      id="add-username"
-                      placeholder="Username"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="add-email">Email address:</label>
-                    <input
-                      class="form-control"
-                      type="email"
-                      id="add-email"
-                      placeholder="Email"
-                    />
-                  </div>
-                  <button type="submit" class="btn btn-default">
-                    Add User
-                  </button>
-                </form>
-                <table id="student" class="table table-hover table-dark">
-                  <tr>
-                    <th id="counter"></th>
-                    <th>Username</th>
-                    <th>Email-id</th>
-                  </tr>
-                  <tbody id="Sdata"></tbody>
-                </table>
-              </div>
-            </h3>
+        <div
+          class="col-xs-12  col-xs-offset-1 col-sm-10 col-sm-offset-1 col-lg-10  col-lg-offset-1 col-md-10 col--offset-1"
+          style="text-align: center;"
+        ><div class="panel panel-primary">
+            <div class="panel-body">
+              <h3 class="text-on-pannel text-primary"><strong class="text-uppercase">Add / Remove </strong></h3>
+              <form
+            class="form-inline"
+            action="javascript:void(0);"
+            method="POST"
+            onsubmit="Add()"
+          >
+            <div class="form-group">
+              <label for="add-username">User Name:</label>
+              <input
+                class="form-control"
+                type="text"
+                id="add-username"
+                placeholder="Username"
+              />
+            </div>
+            <div class="form-group">
+              <label for="add-email">Email address:</label>
+              <input
+                class="form-control"
+                type="email"
+                id="add-email"
+                placeholder="Email"
+              />
+            </div>
+            <button type="submit" class="btn btn-default">Add User</button>
+          </form>
+          <table id="student" class="table table-hover table-dark">
+              <tr>
+                <th id="counter"></td>
+                <th>Username</th>
+                <th>Email-id</th>
+              </tr>
+              <tbody id="Sdata"></tbody>
+            </table>
+            </div>
           </div>
+          
+          
         </div>
       </div>
     </div>
