@@ -25,10 +25,10 @@ function login() {
         	if (usrname == data[i].usrName && pswd == data[i].passWord) {
           		flag=1;
          		if (data[i].admin) {
-            		alert("Welcome Admin");
+            		window.location = "home.html?admin="+data[i].admin;
             		break;
           		} else {
-            		alert("Welcome");
+            		window.location = "home.html?admin="+data[i].admin;
             		break;
           		}
         	} else {
@@ -40,5 +40,7 @@ function login() {
       		alert("Invalid Credentials..");
       	}
 
+    }).catch(function(result){
+    	console.log(result);
     });
 }
