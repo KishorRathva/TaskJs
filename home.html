@@ -12,67 +12,43 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div
-          class="col-xs-12 col-sm-12 col-lg-12 col-md-12"
-          style="text-align: center;height: 100%"
-        >
-          <h1>HOME</h1>
-        </div>
-      </div>
-    </div>
-    <div class="container" style="border: 1px solid black ; padding:10px">
-      <div class="row">
-        <div
-          class="col-xs-4 col-sm-4 col-lg-4 col-md-4"
-          style="text-align: center;"
-        >
-          <button type="button" class="btn btn-primary">ADD</button>
-        </div>
-        <div
-          class="col-xs-4 col-sm-4 col-lg-4 col-md-4"
-          style="text-align: center;"
-        >
-          <button type="button" class="btn btn-primary">REMOVE</button>
-        </div>
-        <div
-          class="col-xs-4 col-sm-4 col-lg-4 col-md-4"
-          style="text-align: center;"
-        >
-          <button type="button" class="btn btn-primary">COURSES</button>
-        </div>
-      </div>
-      <div class="row">
-        <div
-          id="admin"
-          class="col-xs-12 col-sm-12 col-lg-12 col-md-12"
-          style="text-align: center;"
-        ></div>
-      </div>
-    </div>
-    <script language="JavaScript">
-      function processUser() {
-        var parameters = location.search.substring(1).split("&");
-        console.log(parameters);
 
+<body>
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-lg-12 col-md-12" style="text-align: center;height: 100%">
+				<h1>HOME</h1>
+			</div>
+			<div class="row">
+			<div id="admin" class="col-xs-12 col-sm-12 col-lg-12 col-md-12" style="text-align: center;"></div>
+		</div>
+		</div>		
+	</div>
+	<div class="container" style="border: 1px solid black ; padding:10px" >
+		<div class="row">
+			<div class="col-xs-4 col-sm-4 col-lg-4 col-md-4" style="text-align: center;"><button type="button" class="btn btn-primary">ADD</button></div>
+			<div class="col-xs-4 col-sm-4 col-lg-4 col-md-4" style="text-align: center;"><button type="button" class="btn btn-primary">REMOVE</button></div>
+			<div class="col-xs-4 col-sm-4 col-lg-4 col-md-4" style="text-align: center;"><button type="button" class="btn btn-primary">COURSES</button></div>
+		</div>
+	</div>
+<script language="JavaScript">
+  function processUser()
+  {
+    var parameters = location.search.substring(1).split("&");
+    console.log(parameters);
         var temp = parameters[0].split("=");
         let l = unescape(temp[1]);
         console.log(temp);
         console.log(l);
-
-        if (l == "true") {
-          document.getElementById(
-            "admin"
-          ).innerHTML = `<button type="button" class="btn btn-primary">ADMIN</button>`;
-        } else {
-          document.getElementById(
-            "admin"
-          ).innerHTML = `<button type="button" class="btn btn-primary">Student</button>`;
-        }
-      }
-      processUser();
-    </script>
-  </body>
+    if(l == "true"){
+    	document.getElementById("admin").innerHTML = "<p>Hello Admin...</p>";
+    }else{
+    	document.getElementById("admin").innerHTML = "<p>Hello Student...</p>";	
+    }
+    
+  }
+  processUser();
+</script>
+</body>
 </html>
