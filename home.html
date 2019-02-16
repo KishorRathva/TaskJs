@@ -14,72 +14,90 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
   <body>
-    <div class="container">
-      <div class="row">
-        <div
-          class="col-xs-12 col-sm-12 col-lg-12 col-md-12"
-          style="text-align: center;height: 100%"
-        >
-        <div class="panel panel-primary">
-            <div class="panel-body">
-              <h3 class="text-on-pannel text-primary"><strong class="text-uppercase"> HOME </strong></h3>
-              <div
-              class="col-xs-12 col-sm-12 col-lg-12 col-md-12"
-              style="text-align: center;"
-            ><h2 id="admin"></h2>
-          </div>
+      <div class="container">
+          <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#messages">Messages</a></li>
+            <li><a href="#settings">Settings</a></li>
+          </ul>
+           
+          <div class="tab-content">
+            <div class="tab-pane active" id="home">
+                <div class="container">
+                    <div class="row">
+                      <div
+                        class="col-xs-12 col-sm-12 col-lg-12 col-md-12"
+                        style="text-align: center;height: 100%"
+                      >
+                      <div class="panel panel-primary">
+                          <div class="panel-body">
+                            <h3 class="text-on-pannel text-primary"><strong class="text-uppercase"> HOME </strong></h3>
+                            <div
+                            class="col-xs-12 col-sm-12 col-lg-12 col-md-12"
+                            style="text-align: center;"
+                          ><h2 id="admin"></h2>
+                        </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container">
+                    <div class="row">
+                      <div
+                        class="col-xs-12  col-xs-offset-1 col-sm-10 col-sm-offset-1 col-lg-10  col-lg-offset-1 col-md-10 col--offset-1"
+                        style="text-align: center;"
+                      ><div class="panel panel-primary">
+                          <div class="panel-body">
+                            <h3 class="text-on-pannel text-primary"><strong class="text-uppercase">Add / Remove </strong></h3>
+                            <form
+                          class="form-inline"
+                          action="javascript:void(0);"
+                          method="POST"
+                          onsubmit="Add()"
+                        >
+                          <div class="form-group">
+                            <label for="add-username">User Name:</label>
+                            <input
+                              class="form-control"
+                              type="text"
+                              id="add-username"
+                              placeholder="Username"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label for="add-email">Email address:</label>
+                            <input
+                              class="form-control"
+                              type="email"
+                              id="add-email"
+                              placeholder="Email"
+                            />
+                          </div>
+                          <button type="submit" class="btn btn-default">Add User</button>
+                        </form>
+                        <table id="student" class="table table-hover table-dark">
+                            <tr>
+                              <th id="counter"></td>
+                              <th>Username</th>
+                              <th>Email-id</th>
+                            </tr>
+                            <tbody id="Sdata"></tbody>
+                          </table>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div
-          class="col-xs-12  col-xs-offset-1 col-sm-10 col-sm-offset-1 col-lg-10  col-lg-offset-1 col-md-10 col--offset-1"
-          style="text-align: center;"
-        ><div class="panel panel-primary">
-            <div class="panel-body">
-              <h3 class="text-on-pannel text-primary"><strong class="text-uppercase">Add / Remove </strong></h3>
-              <form
-            class="form-inline"
-            action="javascript:void(0);"
-            method="POST"
-            onsubmit="Add()"
-          >
-            <div class="form-group">
-              <label for="add-username">User Name:</label>
-              <input
-                class="form-control"
-                type="text"
-                id="add-username"
-                placeholder="Username"
-              />
-            </div>
-            <div class="form-group">
-              <label for="add-email">Email address:</label>
-              <input
-                class="form-control"
-                type="email"
-                id="add-email"
-                placeholder="Email"
-              />
-            </div>
-            <button type="submit" class="btn btn-default">Add User</button>
-          </form>
-          <table id="student" class="table table-hover table-dark">
-              <tr>
-                <th id="counter"></td>
-                <th>Username</th>
-                <th>Email-id</th>
-              </tr>
-              <tbody id="Sdata"></tbody>
-            </table>
-            </div>
+            <div class="tab-pane" id="profile">Content here...</div>
+            <div class="tab-pane" id="messages">Messages...</div>
+            <div class="tab-pane" id="settings"></div>
+         
           </div>
-          
-        </div>
-      </div>
+    
     </div>
 
     <script language="JavaScript">
@@ -96,7 +114,15 @@
           document.getElementById("admin").innerHTML =
             "<p>Hello Student...</p>";
         }
-      }
+      };
+      $('#myTab a').click(function (e) {
+	 e.preventDefault();
+	 $(this).tab('show');
+});
+
+$(function () {
+$('#myTab a:last').tab('show');``
+})
       processUser();
     </script>
     <script src="script/storage.js"></script>
